@@ -3,6 +3,11 @@ const yearEl = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 yearEl.textContent = currentYear;
 
+const mainNav = document.querySelector(".main-nav");
+mainNav.addEventListener("click", function () {
+  headerEl.classList.remove("nav-open");
+});
+
 // navigation
 const btnNav = document.querySelector(".btn-nav");
 const headerEl = document.querySelector(".header");
