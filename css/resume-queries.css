@@ -1,0 +1,283 @@
+/* rem and em do not depend on html font-size in media queries
+instead we assume 1rem = 1em = 16px */
+
+/***********************************/
+/* BELOW 1200px - 1200px/16px = 75em - Large Laptops*/
+/***********************************/
+@media (max-width: 75em) {
+  .container {
+    max-width: 110rem;
+  }
+}
+
+/***********************************/
+/* 1024px/16px - Laptops*/
+/***********************************/
+
+@media (max-width: 64em) {
+  .skill-name {
+    font-size: 1.7rem;
+  }
+
+  .skill-value,
+  .info-name,
+  .info-value {
+    font-size: 1.5rem;
+  }
+}
+
+/***********************************/
+/* 768px/16px - Tablets*/
+/***********************************/
+
+@media (max-width: 48em) {
+  .main-nav-list {
+    gap: 2.4rem;
+  }
+
+  .header {
+    padding: 0 3.8rem;
+  }
+
+  .header-name {
+    font-size: 4rem;
+  }
+
+  .container {
+    max-width: 100rem;
+  }
+
+  .info-title {
+    font-size: 1.95rem;
+  }
+
+  .skill-name {
+    font-size: 1.6rem;
+  }
+
+  .skill-value,
+  .info-name,
+  .info-value {
+    font-size: 1.4rem;
+  }
+
+  .footer {
+    font-size: 1.2rem;
+    padding: 0.3rem 0.7rem;
+    font-weight: 300;
+  }
+  .experience-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .education-info-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    justify-items: left;
+  }
+}
+
+/***********************************/
+/* 736px/16px - SMALLER DESKTOPS*/
+/***********************************/
+
+@media (max-width: 46em) {
+  .header {
+    padding: 0 3.6rem;
+  }
+
+  .btn-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .main-nav {
+    background-color: rgba(230, 225, 225, 0.73);
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-out;
+
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+
+    transform: translateX(100%);
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .sticky .nav-open .main-nav {
+    background-color: rgba(7, 6, 6, 0.9);
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 3.2rem;
+    padding-top: 2rem;
+  }
+
+  .icon-nav {
+    height: 4.6rem;
+    width: 4.6rem;
+  }
+
+  .info-title {
+    font-size: 1.85rem;
+  }
+
+  .skill-name {
+    font-size: 1.5rem;
+  }
+
+  .skill-value,
+  .info-name,
+  .info-value {
+    font-size: 1.3rem;
+  }
+}
+
+/***********************************/
+/* 688px/16px - SMALLER DESKTOPS*/
+/***********************************/
+@media (max-width: 43em) {
+}
+
+/***********************************/
+/* 630px/16px - SMALLER DESKTOPS*/
+/***********************************/
+
+@media (max-width: 40em) {
+  .header {
+    padding: 0 3.4rem;
+  }
+
+  .resume-cta:link,
+  .resume-cta:visited {
+    padding: 1.2rem 2rem;
+  }
+  .info-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    justify-items: left;
+  }
+}
+
+/***********************************/
+/* below 495 - 480px/16px - SMALLER DESKTOPS*/
+/***********************************/
+
+@media (max-width: 31em) {
+  .name-text {
+    font-size: 3rem;
+  }
+
+  .info-title {
+    font-size: 1.7rem;
+  }
+
+  .skill-name {
+    font-size: 1.4rem;
+  }
+
+  .skill-value,
+  .info-name,
+  .info-value {
+    font-size: 1.2rem;
+  }
+}
+
+/***********************************/
+/* below 448 - 448px/16px - SMALLER DESKTOPS*/
+/***********************************/
+
+@media (max-width: 28em) {
+  .header {
+    padding: 0 3rem;
+  }
+
+  .my-photo {
+    width: 40%;
+  }
+
+  .resume-cta:link,
+  .resume-cta:visited {
+    padding: 1rem 1.8rem;
+    font-size: 1.2rem;
+  }
+
+  .footer {
+    font-size: 1rem;
+    padding: 0.2rem 0.6rem;
+  }
+}
+
+/***********************************/
+/* 432px/16px - SMALLER DESKTOPS*/
+/***********************************/
+
+@media (max-width: 27em) {
+  .skills-info-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    justify-items: left;
+  }
+}
+
+/***********************************/
+/* 375px/16px - SMALLER DESKTOPS*/
+/***********************************/
+
+@media (max-width: 23em) {
+  .my-photo {
+    width: 35%;
+  }
+
+  .header {
+    padding: 0 2.6rem;
+  }
+
+  .header-name {
+    font-size: 3.8rem;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+    padding: 0.1rem 0.5rem;
+  }
+  .icon-nav {
+    height: 4.4rem;
+    width: 4.4rem;
+  }
+}
+
+/***********************************/
+/* 290px/16px - SMALLER DESKTOPS*/
+/***********************************/
+
+@media (max-width: 19em) {
+  .header-name {
+    font-size: 3.4rem;
+  }
+  .icon-nav {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .header {
+    padding: 0 2rem;
+  }
+  .name-text {
+    font-size: 2.8rem;
+  }
+}
