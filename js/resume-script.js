@@ -20,9 +20,6 @@ allLinks.forEach(function (link) {
     // e.preventDefault();
     const href = link.getAttribute("href");
 
-    // if (href === "#") {
-    // }
-
     if (href !== "#" && href.startsWith("#")) {
       const sectionEl = document.querySelector(href);
       sectionEl.scrollIntoView({ behavior: "smooth" });
