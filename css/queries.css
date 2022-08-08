@@ -73,6 +73,24 @@ instead we assume 1rem = 1em = 16px */
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .app-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .app-box {
+    grid-column-start: 1;
+  }
+
+  .app-box .image-box::before {
+    width: 18%;
+    padding-bottom: 18%;
+  }
+
+  .logo-img-photo {
+    width: 15%;
+  }
+
   .hero-text-1 {
     font-size: 2.8rem;
   }
@@ -253,8 +271,17 @@ instead we assume 1rem = 1em = 16px */
 
 @media (max-width: 27em) {
   .skills-grid {
-    display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
+    /* row-gap: 4rem; */
+  }
+
+  .app-box .image-box::before {
+    width: 20%;
+    padding-bottom: 20%;
+  }
+
+  .logo-img-photo {
+    width: 18%;
   }
 
   .logo-img {

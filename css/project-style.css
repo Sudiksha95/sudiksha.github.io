@@ -37,6 +37,7 @@
   line-height: 1.2;
   color: #333;
   text-transform: uppercase;
+  padding-top: 1rem;
 }
 
 .project-langs {
@@ -45,7 +46,7 @@
   align-items: center;
   justify-content: center;
   column-gap: 1.4rem;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   margin-bottom: 1rem;
 }
 
